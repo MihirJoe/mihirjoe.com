@@ -3,18 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mihir Joshi - Biomedical Engineer & AI Researcher</title>
+    <title>Mihir Joshi | Biomedical Engineer & AI Researcher</title>
+    <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        .card-hover {
+            transition: all 0.3s ease-out;
+        }
+        .card-hover:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+        }
+        .button-hover {
+            transition: all 0.2s ease-in-out;
+        }
+        .button-hover:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+        .apple-blur {
+            backdrop-filter: saturate(180%) blur(20px);
+            background-color: rgba(255, 255, 255, 0.72);
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .hero-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('images/yosemite.JPG');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            opacity: 0.25;
+            filter: saturate(0.8) brightness(1.1);
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+    </style>
 </head>
-<body class="bg-gray-50">
+<body class="bg-white">
     <!-- Navigation -->
-    <nav class="fixed w-full bg-white shadow-md z-50">
+    <nav class="fixed w-full apple-blur z-50">
         <div class="container mx-auto px-6 py-3">
             <div class="flex justify-between items-center">
-                <a href="#" class="text-xl font-bold">Mihir Joshi</a>
+                <a href="#" class="text-xl font-medium tracking-tight">Mihir Joshi</a>
                 <div class="hidden md:flex space-x-8">
-                    <a href="#about" class="hover:text-blue-600">About</a>
+                    <a href="#about" class="text-gray-500 hover:text-gray-900 transition-colors duration-200">About</a>
                     <a href="#projects" class="hover:text-blue-600">Projects</a>
                     <a href="#experience" class="hover:text-blue-600">Experience</a>
                     <a href="#contact" class="hover:text-blue-600">Contact</a>
@@ -24,19 +76,26 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="about" class="pt-24 pb-12">
+    <section id="about" class="pt-32 pb-20 relative overflow-hidden">
+        <div class="hero-background"></div>
         <div class="container mx-auto px-6">
-            <div class="flex flex-col md:flex-row items-center">
+            <div class="flex flex-col md:flex-row items-center hero-content">
                 <div class="md:w-1/2 mb-8 md:mb-0">
-                    <img src="images/mihir_smiling_headshot_square.jpg" alt="Mihir Joshi" class="rounded-full w-64 h-64 mx-auto object-cover shadow-lg">
+                    <img src="images/mihir_smiling_headshot_square.jpg" alt="Mihir Joshi" class="rounded-2xl w-80 h-80 mx-auto object-cover shadow-2xl">
                 </div>
                 <div class="md:w-1/2 text-center md:text-left">
-                    <h1 class="text-4xl font-bold mb-4">Mihir Joshi</h1>
-                    <p class="text-xl text-gray-600 mb-6">Biomedical Engineer & AI Researcher</p>
+                    <h1 class="text-6xl font-semibold mb-4 tracking-tight">Mihir Joshi</h1>
+                    <p class="text-2xl text-gray-500 mb-6 font-medium">Biomedical Engineer & AI Researcher</p>
                     <p class="text-gray-700 mb-6">Building at the intersection of AI, sensors, and biomedical knowledge to support early disease detection and continuous health monitoring. Currently focused on developing innovative health technologies and generative AI solutions.</p>
                     <div class="flex justify-center md:justify-start space-x-4">
-                        <a href="mailto:mihirjoe@gmail.com" class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700">Contact Me</a>
-                        <a href="https://linkedin.com/in/mihirjoe" target="_blank" class="bg-gray-200 text-gray-700 px-6 py-2 rounded-full hover:bg-gray-300">LinkedIn</a>
+                        <a href="mailto:mihirjoe@gmail.com" class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 flex items-center button-hover">
+                            <i class="fas fa-envelope mr-2 text-xl"></i>
+                            Contact Me
+                        </a>
+                        <a href="https://linkedin.com/in/mihirjoe" target="_blank" class="bg-blue-900 text-white px-6 py-2 rounded-full hover:bg-blue-800 flex items-center button-hover">
+                            <i class="fab fa-linkedin mr-2 text-xl"></i>
+                            LinkedIn
+                        </a>
                     </div>
                 </div>
             </div>
@@ -44,71 +103,194 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="py-12 bg-white">
+    <section id="projects" class="py-24 bg-gradient-to-b from-white to-gray-50">
         <div class="container mx-auto px-6">
             <h2 class="text-3xl font-bold mb-8 text-center">Featured Projects</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                 <!-- AutopsyAI -->
-                <div class="bg-gray-50 rounded-lg p-6 shadow-md">
-                    <h3 class="text-xl font-bold mb-3">AutopsyAI</h3>
+                <div class="bg-gray-50 rounded-lg p-6 shadow-md card-hover">
+                    <div class="flex items-center mb-3">
+                        <img src="images/AutopsyAI-icon-v3.png" alt="AutopsyAI Logo" class="w-12 h-12 mr-3 rounded-lg">
+                        <h3 class="text-xl font-bold">AutopsyAI</h3>
+                    </div>
                     <p class="text-gray-700 mb-4">An AI-powered tool for reducing autopsy report generation time, tailored for forensic pathologists.</p>
                     <a href="https://autopsy-ai.com" target="_blank" class="text-blue-600 hover:text-blue-800">View Project →</a>
                 </div>
 
                 <!-- MyOIT -->
-                <div class="bg-gray-50 rounded-lg p-6 shadow-md">
-                    <h3 class="text-xl font-bold mb-3">MyOIT</h3>
-                    <p class="text-gray-700 mb-4">iOS app for patients undergoing allergy immunotherapies. IRB-approved research study at Stanford Medicine.</p>
-                    <a href="#" class="text-blue-600 hover:text-blue-800">Learn More →</a>
+                <div class="bg-gray-50 rounded-lg p-6 shadow-md card-hover">
+                    <div class="flex items-center mb-3">
+                        <img src="images/MyOIT-iOS-icon.png" alt="MyOIT Logo" class="w-12 h-12 mr-3 rounded-lg">
+                        <h3 class="text-xl font-bold">MyOIT</h3>
+                    </div>
+                    <p class="text-gray-700 mb-4">An iOS app for patients to manage their allergy immunotherapy.</p>
+                    <a href="https://drive.google.com/file/d/1Ng4_fWWum7hsSAKX2VMWB0h7asOGZdjQ/view?usp=sharing" target="_blank" class="text-blue-600 hover:text-blue-800">View Project →</a>
                 </div>
 
                 <!-- BUDI -->
-                <div class="bg-gray-50 rounded-lg p-6 shadow-md">
-                    <h3 class="text-xl font-bold mb-3">BUDI</h3>
-                    <p class="text-gray-700 mb-4">Real-time biofeedback iOS app for pediatric cerebral palsy patients. Built with Stanford medical professionals.</p>
+                <div class="bg-gray-50 rounded-lg p-6 shadow-md card-hover">
+                    <div class="flex items-center mb-3">
+                        <img src="images/budi logo transparent.png" alt="BUDI Logo" class="w-12 h-12 mr-3 rounded-lg">
+                        <h3 class="text-xl font-bold">BUDI</h3>
+                    </div>
+                    <p class="text-gray-700 mb-4">Real-time biofeedback iOS app for pediatric cerebral palsy patients.</p>
                     <a href="https://budiapp.webflow.io/" target="_blank" class="text-blue-600 hover:text-blue-800">View Project →</a>
                 </div>
 
-                <!-- DermAI -->
-                <div class="bg-gray-50 rounded-lg p-6 shadow-md">
-                    <h3 class="text-xl font-bold mb-3">DermAI</h3>
-                    <p class="text-gray-700 mb-4">iOS app that predicts skin cancer types from images. 1st place winner at HackAI, Ohio State's premiere AI hackathon.</p>
-                    <a href="https://github.com/MihirJoe/DermAI" target="_blank" class="text-blue-600 hover:text-blue-800">View on GitHub →</a>
+                <!-- Cardiac MRI -->
+                <div class="bg-gray-50 rounded-lg p-6 shadow-md card-hover">
+                    <div class="flex items-center mb-3">
+                        <h3 class="text-xl font-bold">Cardiac MRI Sampling</h3>
+                    </div>
+                    <p class="text-gray-700 mb-4">Open-source tool compiling Cartesian sampling techniques to speed up cardiac magnetic resonance (CMR) acquisition.</p>
+                    <div class="flex space-x-4">
+                        <a href="https://github.com/MihirJoe/cmr-sampling" target="_blank" class="text-blue-600 hover:text-blue-800">GitHub →</a>
+                        <a href="https://arxiv.org/abs/2206.03630" target="_blank" class="text-blue-600 hover:text-blue-800">Publication →</a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Experience Section -->
-    <section id="experience" class="py-12">
+    <section id="experience" class="py-24 bg-white">
         <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold mb-8 text-center">Experience</h2>
-            <div class="space-y-6">
-                <div class="bg-white rounded-lg p-6 shadow-md">
-                    <h3 class="text-xl font-bold">Machine Learning Engineer</h3>
-                    <p class="text-gray-600">The Forensic Pathologists LLC | March 2024 - Present</p>
-                    <ul class="list-disc list-inside mt-3 text-gray-700">
-                        <li>Designed and deployed fine-tuned language model on AWS</li>
-                        <li>Developed scalable pipeline for model improvement using human feedback</li>
-                        <li>Built Vision Pro and iPad app for automated report generation</li>
-                    </ul>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Work Experience Column -->
+                <div>
+                    <h2 class="text-3xl font-bold mb-8 text-center">Work Experience</h2>
+                    <div class="space-y-6">
+                        <!-- Apple Inc. -->
+                        <div class="bg-white rounded-lg p-6 shadow-md card-hover reveal">
+                            <div class="flex items-center">
+                                <img src="images/apple_logo.png" alt="Apple Logo" class="w-12 h-12 mr-4 rounded-lg object-contain bg-white p-1 flex-shrink-0">
+                                <div>
+                                    <h3 class="text-xl font-bold">Apple Inc.</h3>
+                                    <p class="text-gray-600 font-bold">Biomedical R&D Intern</p>
+                                    <p class="text-gray-600">September 2022 - August 2023 | Cupertino, CA</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Johnson & Johnson MedTech -->
+                        <div class="bg-white rounded-lg p-6 shadow-md card-hover reveal">
+                            <div class="flex items-center">
+                                <img src="images/j&j logo.jpg" alt="Johnson & Johnson Logo" class="w-12 h-12 mr-4 rounded-lg object-contain bg-white p-1 flex-shrink-0">
+                                <div>
+                                    <h3 class="text-xl font-bold">Johnson & Johnson MedTech</h3>
+                                    <p class="text-gray-600 font-bold">Data Science R&D Co-op</p>
+                                    <p class="text-gray-600">May 2022 – August 2022 | Cincinnati, OH</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Stanford Biodesign -->
+                        <div class="bg-white rounded-lg p-6 shadow-md card-hover reveal">
+                            <div class="flex items-center">
+                                <img src="images/stanford_biodesign.png" alt="Stanford Biodesign Logo" class="w-16 h-16 mr-4 rounded-lg object-contain bg-white p-1 flex-shrink-0">
+                                <div>
+                                    <h3 class="text-xl"><span class="font-bold">Stanford Biodesign</span> Digital Health Lab</h3>
+                                    <p class="text-gray-600 font-bold">Software Engineer</p>
+                                    <p class="text-gray-600">May 2022 – August 2022 | Stanford, CA</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="bg-white rounded-lg p-6 shadow-md">
-                    <h3 class="text-xl font-bold">Biomedical R&D Intern</h3>
-                    <p class="text-gray-600">Apple Inc. | September 2022 - August 2023</p>
-                    <ul class="list-disc list-inside mt-3 text-gray-700">
-                        <li>Enhanced multimodal health sensing using ECG and PPG data</li>
-                        <li>Developed novel health sensor data synchronization platform</li>
-                        <li>Led data collection efforts across 12 user studies</li>
-                    </ul>
+                <!-- Research Experience Column -->
+                <div>
+                    <h2 class="text-3xl font-bold mb-8 text-center">Research Experience</h2>
+                    <div class="space-y-6">
+                        <!-- OSU Ocular Lab -->
+                        <div class="bg-white rounded-lg p-6 shadow-md card-hover reveal">
+                            <div class="flex items-center">
+                                <img src="images/osu_logo.png" alt="OSU Logo" class="w-12 h-12 mr-4 rounded-lg object-contain bg-white p-1 flex-shrink-0">
+                                <div>
+                                    <h3 class="text-xl font-bold">Ocular Imaging and Biomechanics Lab</h3>
+                                    <p class="text-gray-600 font-bold">Undergraduate Researcher</p>
+                                    <p class="text-gray-600">March 2024 – Present | Columbus, OH</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Stanford Medicine -->
+                        <div class="bg-white rounded-lg p-6 shadow-md card-hover reveal">
+                            <div class="flex items-center">
+                                <img src="images/stanford_medicine_logo.png" alt="Stanford Medicine Logo" class="w-12 h-12 mr-4 rounded-lg object-contain bg-white p-1 flex-shrink-0">
+                                <div>
+                                    <h3 class="text-xl"><span class="font-bold">Stanford Medicine</span> Allergy & Asthma Research Center</h3>
+                                    <p class="text-gray-600 font-bold">Digital Health Researcher</p>
+                                    <p class="text-gray-600">May 2021 - present | Stanford, CA</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- OSU Cardiac MRI Lab -->
+                        <div class="bg-white rounded-lg p-6 shadow-md card-hover reveal">
+                            <div class="flex items-center">
+                                <img src="images/osu_logo.png" alt="OSU Logo" class="w-12 h-12 mr-4 rounded-lg object-contain bg-white p-1 flex-shrink-0">
+                                <div>
+                                    <h3 class="text-xl font-bold">Cardiac MRI Lab</h3>
+                                    <p class="text-gray-600 font-bold">BME Undergraduate Researcher</p>
+                                    <p class="text-gray-600">August 2021 - August 2022 | Columbus, OH</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-24 bg-gradient-to-b from-gray-50 to-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-8 text-center">Skills</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-white rounded-lg p-6 shadow-md card-hover">
+                    <h3 class="text-lg font-bold mb-3">Artificial Intelligence</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Machine Learning</span>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Computer Vision</span>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Generative AI</span>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Large Language Models</span>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Retrieval Augmented Generation</span>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg p-6 shadow-md card-hover">
+                    <h3 class="text-lg font-bold mb-3">Programming and Software</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Python</span>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">PyTorch</span>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Swift</span>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">MATLAB</span>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg p-6 shadow-md card-hover">
+                    <h3 class="text-lg font-bold mb-3">Cloud & Deployment</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">AWS (S3, Lambda, Bedrock)</span>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Scalable ML Pipelines</span>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Model Distillation</span>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Knowledge Injection</span>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg p-6 shadow-md card-hover">
+                    <h3 class="text-lg font-bold mb-3">Biomedical Applications</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Health Data Security & Privacy</span>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Digital Health</span>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Wearable Sensors</span>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Medical Imaging</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-12 bg-white">
+    <section id="contact" class="py-24 bg-white">
         <div class="container mx-auto px-6 text-center">
             <h2 class="text-3xl font-bold mb-8">Get in Touch</h2>
             <div class="flex justify-center space-x-6">
@@ -126,10 +308,37 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-6">
+    <footer class="bg-gray-100 text-gray-500 py-8">
         <div class="container mx-auto px-6 text-center">
-            <p>© 2024 Mihir Joshi. All rights reserved.</p>
+            <p class="text-sm">© 2024 Mihir Joshi. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        // Disable right-click context menu
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+
+        // Reveal animation on scroll
+        const observerOptions = {
+            threshold: 0.2,
+            rootMargin: "0px"
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const revealElements = document.querySelectorAll('.reveal');
+            revealElements.forEach(element => observer.observe(element));
+        });
+    </script>
 </body>
 </html>
