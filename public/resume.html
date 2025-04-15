@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mihir Joshi - Resume</title>
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        .button-hover {
+            transition: all 0.2s ease-in-out;
+        }
+        .button-hover:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+        .apple-blur {
+            backdrop-filter: saturate(180%) blur(20px);
+            background-color: rgba(255, 255, 255, 0.72);
+        }
+        .resume-container {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+        .resume-section {
+            margin-bottom: 1.5rem;
+        }
+        .resume-section-title {
+            border-bottom: 2px solid #3b82f6;
+            padding-bottom: 0.25rem;
+            margin-bottom: 0.75rem;
+        }
+        .resume-item {
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed w-full apple-blur z-50">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="text-xl font-medium tracking-tight">Mihir Joshi</a>
+                <div class="flex space-x-4">
+                    <a href="index.html" class="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 flex items-center button-hover">
+                        <i class="fas fa-arrow-left mr-2"></i>
+                        Back to Portfolio
+                    </a>
+                    <a href="javascript:window.print()" class="bg-gray-600 text-white px-4 py-2 rounded-full hover:bg-gray-700 flex items-center button-hover">
+                        <i class="fas fa-print mr-2"></i>
+                        Print Resume
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Resume Content -->
+    <div class="pt-24 pb-16 px-6">
+        <div class="resume-container bg-white p-8 shadow-md rounded-lg">
+            <header class="text-center mb-8">
+                <h1 class="text-4xl font-bold mb-2">Mihir Joshi</h1>
+                <p class="text-xl text-gray-600 mb-4">Biomedical Engineer & AI Researcher</p>
+                <div class="flex justify-center space-x-4">
+                    <a href="mailto:mihirjoe@gmail.com" class="text-blue-600 hover:text-blue-800">
+                        <i class="fas fa-envelope mr-1"></i> mihirjoe@gmail.com
+                    </a>
+                    <a href="https://linkedin.com/in/mihirjoe" target="_blank" class="text-blue-600 hover:text-blue-800">
+                        <i class="fab fa-linkedin mr-1"></i> linkedin.com/in/mihirjoe
+                    </a>
+                    <a href="https://github.com/MihirJoe" target="_blank" class="text-blue-600 hover:text-blue-800">
+                        <i class="fab fa-github mr-1"></i> github.com/MihirJoe
+                    </a>
+                </div>
+            </header>
+
+            <!-- Education Section -->
+            <section class="resume-section">
+                <h2 class="text-2xl font-bold resume-section-title">Education</h2>
+                <div class="resume-item">
+                    <div class="flex justify-between">
+                        <h3 class="text-xl font-bold">University of California, Los Angeles</h3>
+                        <span class="text-gray-600">Expected June 2027</span>
+                    </div>
+                    <p class="text-gray-700">M.S. Bioengineering</p>
+                </div>
+                <div class="resume-item">
+                    <div class="flex justify-between">
+                        <h3 class="text-xl font-bold">The Ohio State University</h3>
+                        <span class="text-gray-600">May 2025</span>
+                    </div>
+                    <p class="text-gray-700">B.S. Biomedical Engineering with Honors, Minor in Computer Science</p>
+                </div>
+            </section>
+
+            <!-- Experience Section -->
+            <section class="resume-section">
+                <h2 class="text-2xl font-bold resume-section-title">Professional Experience</h2>
+                
+                <!-- Apple -->
+                <div class="resume-item">
+                    <div class="flex justify-between">
+                        <h3 class="text-xl font-bold">Apple Inc.</h3>
+                        <span class="text-gray-600">September 2022 - August 2023</span>
+                    </div>
+                    <p class="font-medium text-gray-800">Biomedical R&D Intern | Cupertino, CA</p>
+                    <ul class="list-disc pl-5 mt-2 text-gray-700">
+                        <li>Conducted biomedical R&D for health technology solutions</li>
+                        <li>Worked on advanced health monitoring applications</li>
+                    </ul>
+                </div>
+                
+                <!-- Johnson & Johnson -->
+                <div class="resume-item">
+                    <div class="flex justify-between">
+                        <h3 class="text-xl font-bold">Johnson & Johnson MedTech</h3>
+                        <span class="text-gray-600">May 2022 – August 2022</span>
+                    </div>
+                    <p class="font-medium text-gray-800">Data Science R&D Co-op | Cincinnati, OH</p>
+                    <ul class="list-disc pl-5 mt-2 text-gray-700">
+                        <li>Led data science initiatives for medical technology applications</li>
+                        <li>Developed analytical solutions for healthcare problems</li>
+                    </ul>
+                </div>
+                
+                <!-- Stanford Biodesign -->
+                <div class="resume-item">
+                    <div class="flex justify-between">
+                        <h3 class="text-xl font-bold">Stanford Biodesign Digital Health Lab</h3>
+                        <span class="text-gray-600">May 2022 – August 2022</span>
+                    </div>
+                    <p class="font-medium text-gray-800">Software Engineer | Stanford, CA</p>
+                    <ul class="list-disc pl-5 mt-2 text-gray-700">
+                        <li>Engineered digital health applications and solutions</li>
+                        <li>Collaborated on innovative healthcare technology projects</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Research Section -->
+            <section class="resume-section">
+                <h2 class="text-2xl font-bold resume-section-title">Research Experience</h2>
+                
+                <!-- OSU Ocular Lab -->
+                <div class="resume-item">
+                    <div class="flex justify-between">
+                        <h3 class="text-xl font-bold">Ocular Imaging and Biomechanics Lab</h3>
+                        <span class="text-gray-600">March 2024 – Present</span>
+                    </div>
+                    <p class="font-medium text-gray-800">Undergraduate Researcher | The Ohio State University</p>
+                </div>
+                
+                <!-- Stanford Medicine -->
+                <div class="resume-item">
+                    <div class="flex justify-between">
+                        <h3 class="text-xl font-bold">Stanford Medicine Allergy & Asthma Research Center</h3>
+                        <span class="text-gray-600">May 2021 - Present</span>
+                    </div>
+                    <p class="font-medium text-gray-800">Digital Health Researcher | Stanford, CA</p>
+                </div>
+                
+                <!-- OSU Cardiac MRI Lab -->
+                <div class="resume-item">
+                    <div class="flex justify-between">
+                        <h3 class="text-xl font-bold">Cardiac MRI Lab</h3>
+                        <span class="text-gray-600">August 2021 - August 2022</span>
+                    </div>
+                    <p class="font-medium text-gray-800">BME Undergraduate Researcher | The Ohio State University</p>
+                </div>
+            </section>
+
+            <!-- Publications Section -->
+            <section class="resume-section">
+                <h2 class="text-2xl font-bold resume-section-title">Publications</h2>
+                <div class="resume-item">
+                    <p class="text-gray-700"><strong>Joshi, M.</strong>, Pruitt, A., Chen, C., Liu, Y., & Ahmad, R. (2022, June 8). Technical Report (v1.0)—Pseudo-random Cartesian Sampling for Dynamic MRI. arXiv.Org.</p>
+                </div>
+                <div class="resume-item">
+                    <p class="text-gray-700">Liu, J., Pathak, G., <strong>Joshi, M.</strong>, Andrews, K., & Lee, J. (2021). A meta-analysis comparing the outcomes of syndesmotic injury treated with metal screw, dynamic fixation, and bioabsorbable screw. Journal of Orthopaedics, 25, 82–87.</p>
+                </div>
+            </section>
+
+            <!-- Skills Section -->
+            <section class="resume-section">
+                <h2 class="text-2xl font-bold resume-section-title">Technical Skills</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <h3 class="font-bold text-gray-800 mb-2">Artificial Intelligence</h3>
+                        <p class="text-gray-700">Machine Learning, Computer Vision, Generative AI, LLMs, RAG</p>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-gray-800 mb-2">Programming</h3>
+                        <p class="text-gray-700">Python, PyTorch, Swift, MATLAB</p>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-gray-800 mb-2">Cloud & Deployment</h3>
+                        <p class="text-gray-700">AWS (S3, Lambda, Bedrock), ML Pipelines, Model Distillation</p>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-gray-800 mb-2">Biomedical Applications</h3>
+                        <p class="text-gray-700">Health Data Security, Digital Health, Wearable Sensors, Medical Imaging</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <footer class="bg-gray-100 text-gray-500 py-6">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-sm">© 2025 Mihir Joshi. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html> 

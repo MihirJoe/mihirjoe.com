@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mihir Joshi | Biomedical Engineer & AI Researcher</title>
-    <link rel="icon" href="data:,">
+    <title>Mihir Joshi</title>
+    <!-- <link rel="icon" href="images/favicon.svg"> -->
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
     <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
@@ -68,9 +69,13 @@
                 <a href="#" class="text-xl font-medium tracking-tight">Mihir Joshi</a>
                 <div class="hidden md:flex space-x-8">
                     <a href="#about" class="text-gray-500 hover:text-gray-900 transition-colors duration-200">About</a>
-                    <a href="#projects" class="hover:text-blue-600">Projects</a>
+                    <a href="#education" class="hover:text-blue-600">Education</a>
                     <a href="#experience" class="hover:text-blue-600">Experience</a>
-                    <a href="#contact" class="hover:text-blue-600">Contact</a>
+                    <a href="#projects" class="hover:text-blue-600">Projects</a>
+                    <a href="#skills" class="hover:text-blue-600">Skills</a>
+                    <a href="#publications" class="hover:text-blue-600">Publications</a>
+                    <a href="#news" class="hover:text-blue-600">News</a>
+                    <!-- <a href="#contact" class="hover:text-blue-600">Contact</a> -->
                 </div>
             </div>
         </div>
@@ -97,56 +102,42 @@
                             <i class="fab fa-linkedin mr-2 text-xl"></i>
                             LinkedIn
                         </a>
+                        <a href="https://github.com/MihirJoe" target="_blank" class="bg-gray-800 text-white px-6 py-2 rounded-full hover:bg-gray-700 flex items-center button-hover">
+                            <i class="fab fa-github mr-2 text-xl"></i>
+                            GitHub
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="py-24 bg-gradient-to-b from-white to-gray-50">
+    <!-- Education Section -->
+    <section id="education" class="py-16 bg-white">
         <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold mb-8 text-center">Featured Projects</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                <!-- AutopsyAI -->
-                <div class="bg-gray-50 rounded-lg p-6 shadow-md card-hover">
-                    <div class="flex items-center mb-3">
-                        <img src="images/AutopsyAI-icon-v3.png" alt="AutopsyAI Logo" class="w-12 h-12 mr-3 rounded-lg">
-                        <h3 class="text-xl font-bold">AutopsyAI</h3>
+            <h2 class="text-3xl font-bold mb-8 text-center">Education</h2>
+            <div class="max-w-3xl mx-auto space-y-6">
+                <!-- UCLA -->
+                <div class="bg-white rounded-lg p-6 shadow-md card-hover reveal">
+                    <div class="flex items-center">
+                        <img src="images/ucla_logo.jpg" alt="UCLA Logo" class="w-12 h-12 mr-4 rounded-lg object-contain bg-white p-1 flex-shrink-0">
+                        <div>
+                            <h3 class="text-xl font-bold">University of California, Los Angeles</h3>
+                            <p class="text-gray-600 font-bold">M.S. Bioengineering</p>
+                            <p class="text-gray-600">Expected June 2027</p>
+                        </div>
                     </div>
-                    <p class="text-gray-700 mb-4">An AI-powered tool for reducing autopsy report generation time, tailored for forensic pathologists.</p>
-                    <a href="https://autopsy-ai.com" target="_blank" class="text-blue-600 hover:text-blue-800">View Project →</a>
                 </div>
-
-                <!-- MyOIT -->
-                <div class="bg-gray-50 rounded-lg p-6 shadow-md card-hover">
-                    <div class="flex items-center mb-3">
-                        <img src="images/MyOIT-iOS-icon.png" alt="MyOIT Logo" class="w-12 h-12 mr-3 rounded-lg">
-                        <h3 class="text-xl font-bold">MyOIT</h3>
-                    </div>
-                    <p class="text-gray-700 mb-4">An iOS app for patients to manage their allergy immunotherapy.</p>
-                    <a href="https://drive.google.com/file/d/1Ng4_fWWum7hsSAKX2VMWB0h7asOGZdjQ/view?usp=sharing" target="_blank" class="text-blue-600 hover:text-blue-800">View Project →</a>
-                </div>
-
-                <!-- BUDI -->
-                <div class="bg-gray-50 rounded-lg p-6 shadow-md card-hover">
-                    <div class="flex items-center mb-3">
-                        <img src="images/budi logo transparent.png" alt="BUDI Logo" class="w-12 h-12 mr-3 rounded-lg">
-                        <h3 class="text-xl font-bold">BUDI</h3>
-                    </div>
-                    <p class="text-gray-700 mb-4">Real-time biofeedback iOS app for pediatric cerebral palsy patients.</p>
-                    <a href="https://budiapp.webflow.io/" target="_blank" class="text-blue-600 hover:text-blue-800">View Project →</a>
-                </div>
-
-                <!-- Cardiac MRI -->
-                <div class="bg-gray-50 rounded-lg p-6 shadow-md card-hover">
-                    <div class="flex items-center mb-3">
-                        <h3 class="text-xl font-bold">Cardiac MRI Sampling</h3>
-                    </div>
-                    <p class="text-gray-700 mb-4">Open-source tool compiling Cartesian sampling techniques to speed up cardiac magnetic resonance (CMR) acquisition.</p>
-                    <div class="flex space-x-4">
-                        <a href="https://github.com/MihirJoe/cmr-sampling" target="_blank" class="text-blue-600 hover:text-blue-800">GitHub →</a>
-                        <a href="https://arxiv.org/abs/2206.03630" target="_blank" class="text-blue-600 hover:text-blue-800">Publication →</a>
+                
+                <!-- OSU -->
+                <div class="bg-white rounded-lg p-6 shadow-md card-hover reveal">
+                    <div class="flex items-center">
+                        <img src="images/osu_logo.png" alt="OSU Logo" class="w-12 h-12 mr-4 rounded-lg object-contain bg-white p-1 flex-shrink-0">
+                        <div>
+                            <h3 class="text-xl font-bold">The Ohio State University</h3>
+                            <p class="text-gray-600 font-bold">B.S. Biomedical Engineering with Honors, Minor in Computer Science</p>
+                            <p class="text-gray-600">May 2025</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -154,7 +145,7 @@
     </section>
 
     <!-- Experience Section -->
-    <section id="experience" class="py-24 bg-white">
+    <section id="experience" class="py-16 bg-white">
         <div class="container mx-auto px-6">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <!-- Work Experience Column -->
@@ -222,7 +213,7 @@
                                 <div>
                                     <h3 class="text-xl"><span class="font-bold">Stanford Medicine</span> Allergy & Asthma Research Center</h3>
                                     <p class="text-gray-600 font-bold">Digital Health Researcher</p>
-                                    <p class="text-gray-600">May 2021 - present | Stanford, CA</p>
+                                    <p class="text-gray-600">May 2021 - Present | Stanford, CA</p>
                                 </div>
                             </div>
                         </div>
@@ -244,8 +235,58 @@
         </div>
     </section>
 
+    <!-- Projects Section -->
+    <section id="projects" class="py-24 bg-gradient-to-b from-white to-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-8 text-center">Featured Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- AutopsyAI -->
+                <div class="bg-gray-50 rounded-lg p-6 shadow-md card-hover">
+                    <div class="flex items-center mb-3">
+                        <img src="images/AutopsyAI-icon-v3.png" alt="AutopsyAI Logo" class="w-12 h-12 mr-3 rounded-lg">
+                        <h3 class="text-xl font-bold">AutopsyAI</h3>
+                    </div>
+                    <p class="text-gray-700 mb-4">An AI-powered tool for reducing autopsy report generation time, tailored for forensic pathologists.</p>
+                    <a href="https://autopsy-ai.com" target="_blank" class="text-blue-600 hover:text-blue-800">View Project →</a>
+                </div>
+
+                <!-- MyOIT -->
+                <div class="bg-gray-50 rounded-lg p-6 shadow-md card-hover">
+                    <div class="flex items-center mb-3">
+                        <img src="images/MyOIT-iOS-icon.png" alt="MyOIT Logo" class="w-12 h-12 mr-3 rounded-lg">
+                        <h3 class="text-xl font-bold">MyOIT</h3>
+                    </div>
+                    <p class="text-gray-700 mb-4">An iOS app for patients to manage their allergy immunotherapy.</p>
+                    <a href="https://drive.google.com/file/d/1Ng4_fWWum7hsSAKX2VMWB0h7asOGZdjQ/view?usp=sharing" target="_blank" class="text-blue-600 hover:text-blue-800">View Project →</a>
+                </div>
+
+                <!-- BUDI -->
+                <div class="bg-gray-50 rounded-lg p-6 shadow-md card-hover">
+                    <div class="flex items-center mb-3">
+                        <img src="images/budi logo transparent.png" alt="BUDI Logo" class="w-12 h-12 mr-3 rounded-lg">
+                        <h3 class="text-xl font-bold">BUDI</h3>
+                    </div>
+                    <p class="text-gray-700 mb-4">Real-time biofeedback iOS app for pediatric cerebral palsy patients.</p>
+                    <a href="https://budiapp.webflow.io/" target="_blank" class="text-blue-600 hover:text-blue-800">View Project →</a>
+                </div>
+
+                <!-- Cardiac MRI -->
+                <div class="bg-gray-50 rounded-lg p-6 shadow-md card-hover">
+                    <div class="flex items-center mb-3">
+                        <h3 class="text-xl font-bold">Cardiac MRI Sampling</h3>
+                    </div>
+                    <p class="text-gray-700 mb-4">Open-source tool compiling Cartesian sampling techniques to speed up cardiac magnetic resonance (CMR) acquisition.</p>
+                    <div class="flex space-x-4">
+                        <a href="https://github.com/MihirJoe/cmr-sampling" target="_blank" class="text-blue-600 hover:text-blue-800">GitHub →</a>
+                        <a href="https://arxiv.org/abs/2206.03630" target="_blank" class="text-blue-600 hover:text-blue-800">Publication →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Skills Section -->
-    <section id="skills" class="py-24 bg-gradient-to-b from-gray-50 to-white">
+    <section id="skills" class="py-16 bg-gradient-to-b from-white to-gray-50">
         <div class="container mx-auto px-6">
             <h2 class="text-3xl font-bold mb-8 text-center">Skills</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -290,8 +331,58 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-24 bg-white">
+    <!-- Publications Section -->
+    <section id="publications" class="py-16 bg-gradient-to-b from-white to-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-8 text-center">Publications</h2>
+            <div class="max-w-3xl mx-auto space-y-6">
+                <div class="bg-white rounded-lg p-6 shadow-md card-hover reveal">
+                    <p class="text-gray-700 mb-3"><strong>Joshi, M.</strong>, Pruitt, A., Chen, C., Liu, Y., & Ahmad, R. (2022, June 8). Technical Report (v1.0)—Pseudo-random Cartesian Sampling for Dynamic MRI. arXiv.Org.</p>
+                    <a href="https://arxiv.org/abs/2206.03630v1" target="_blank" class="text-blue-600 hover:text-blue-800">View Publication →</a>
+                </div>
+                
+                <div class="bg-white rounded-lg p-6 shadow-md card-hover reveal">
+                    <p class="text-gray-700 mb-3">Liu, J., Pathak, G., <strong>Joshi, M.</strong>, Andrews, K., & Lee, J. (2021). A meta-analysis comparing the outcomes of syndesmotic injury treated with metal screw, dynamic fixation, and bioabsorbable screw. Journal of Orthopaedics, 25, 82–87.</p>
+                    <a href="https://doi.org/10.1016/j.jor.2021.04.006" target="_blank" class="text-blue-600 hover:text-blue-800">View Publication →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Section -->
+    <section id="news" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-8 text-center">News</h2>
+            <div class="max-w-3xl mx-auto space-y-6">
+                <!-- Ohio State BMES Design Team Article -->
+                <div class="bg-white rounded-lg p-6 shadow-md card-hover reveal">
+                    <div class="flex items-center">
+                        <img src="images/osu_logo.png" alt="OSU Logo" class="w-12 h-12 mr-4 rounded-lg object-contain bg-white p-1 flex-shrink-0">
+                        <div>
+                            <h3 class="text-xl font-bold">Ohio State BMES Design Team Article</h3>
+                            <p class="text-gray-600">April 2024</p>
+                            <a href="https://bme.osu.edu/news/2024/04/bmes-design-team-collaborates-nationwide-childrens-hospital-create-medical-device" target="_blank" class="text-blue-600 hover:text-blue-800">Read Article →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stanford News Article -->
+                <div class="bg-white rounded-lg p-6 shadow-md card-hover reveal">
+                    <div class="flex items-center">
+                        <img src="images/stanford_medicine_logo.png" alt="Stanford Logo" class="w-12 h-12 mr-4 rounded-lg object-contain bg-white p-1 flex-shrink-0">
+                        <div>
+                            <h3 class="text-xl font-bold">Stanford News Article on The BUDI System</h3>
+                            <p class="text-gray-600">July 2022</p>
+                            <a href="https://news.stanford.edu/report/2022/07/22/digital-solution-kids-cerebral-palsy/" target="_blank" class="text-blue-600 hover:text-blue-800">Read Article →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section
+    <section id="contact" class="py-16 bg-white">
         <div class="container mx-auto px-6 text-center">
             <h2 class="text-3xl font-bold mb-8">Get in Touch</h2>
             <div class="flex justify-center space-x-6">
@@ -306,12 +397,12 @@
                 </a>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- Footer -->
     <footer class="bg-gray-100 text-gray-500 py-8">
         <div class="container mx-auto px-6 text-center">
-            <p class="text-sm">© 2024 Mihir Joshi. All rights reserved.</p>
+            <p class="text-sm">© 2025 Mihir Joshi. All rights reserved.</p>
         </div>
     </footer>
 
@@ -319,6 +410,22 @@
         // Disable right-click context menu
         document.addEventListener('contextmenu', function(e) {
             e.preventDefault();
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80, // Offset to account for fixed header
+                        behavior: 'smooth'
+                    });
+                }
+            });
         });
 
         // Reveal animation on scroll
